@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import io
 import json
 import os
+import logging
 
 import crochet
 import six
@@ -323,7 +324,9 @@ def fetch(
         EventualResult object as stated in the official documentation
 
     """
-
+    logging.basicConfig(level=logging.DEBUG)
+    logging.debug(u"%s %s(%r)" % (method, url, body))
+    
     # Twisted requires the method, url, headers to be bytes
     url = to_bytes(url)
     method = to_bytes(method)
