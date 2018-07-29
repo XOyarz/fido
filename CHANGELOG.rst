@@ -1,4 +1,16 @@
-4.2.0 (2016-09-26)
+4.2.3 (2018-06-06)
+-------------------
+- Add support for gzip decompression
+
+4.2.2 (2017-10-02)
+------------------
+- Make listify_headers UTF-8 encode keys (bugfix see issue #55).
+
+4.2.1 (2017-07-05)
+------------------
+- Make HTTPTimeoutError inherit from crochet.TimeoutError. This helps with code that still catches crochet.TimeoutError and also helps with a recent change in bravado to convert crochet.TimeoutError into HTTPTimeoutError.
+
+4.2.0 (2017-06-21)
 ------------------
 - Move TLS support into an extras so that the vast majority of users that are
   not using TLS don't need to install extra dependencies. If you do use TLS/SSL
